@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./GlobalStyle";
+import RouteComponent from "./Router/RouteComponent";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 function App() {
+  const theme = {
+    colors:{
+      bg:"#CAEDFF",
+      
+    },
+    media:{
+      mobile:"540px",
+      tab:"990px"
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+      <Header/>
+      <RouteComponent/>
+      <Footer/>
+    </ThemeProvider>
   );
 }
 
