@@ -2,7 +2,7 @@ import React, { useEffect,useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import { Button } from '../Styles/Button'
-import {RxHamburgerMenu} from "react-icons/rx"
+// import {RxHamburgerMenu} from "react-icons/rx"
 
 const Dashboard = () => {
   let login = localStorage.getItem('login')
@@ -26,9 +26,9 @@ const Dashboard = () => {
   return (
     <Wrapper>
       <div className={tog?'main':"main main2"}>
-        <RxHamburgerMenu onClick={()=>setTog(!tog)} className='icon'/>
+        
       <div className='togle'>
-        <img  src='https://img.freepik.com/premium-vector/education-icon-vector-illustartion-college-cap-graduate-hat-symbol-student-degree-sign_87543-11779.jpg' alt='hat'/>
+        <img onClick={()=>setTog(!tog)} src='https://img.freepik.com/premium-vector/education-icon-vector-illustartion-college-cap-graduate-hat-symbol-student-degree-sign_87543-11779.jpg' alt='hat'/>
         <p>My courses</p>
         </div>
       </div>
