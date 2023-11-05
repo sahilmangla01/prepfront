@@ -68,7 +68,7 @@ const FullstackProgram = () => {
             <div className="btnsection flex flex-column">
               <div className="enroll-money">₹ 30000</div>
               <div>
-                <RazorPay className="btn1" amount={30000} name={"FullStack Programe"}/>
+                <RazorPay  amount={30000} name={"Elevation  Academy Batch -FullStack Programe"} btn={"Enroll"}/>
                 <button className="btn2">Try for Free</button>
               </div>
             </div>
@@ -501,25 +501,29 @@ const Wrapper = styled.section`
     font-weight: bold;
   }
   .btnsection {
+    
     align-items: center;
     justify-content: center;
-  }
-  .btn1,
-  .btn2 {
-    font-size: 2rem;
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 1rem;
-    margin: 1rem 1rem 0 0;
-  }
-  .btn1 {
-    background-color: orangered;
+    button{
+      font-size: 2rem;
+      width:10vw;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 1rem;
+      margin: 1rem 1rem 0 0;
+      background-color: orangered;
     border: 2px solid orangered;
+    }
+    .btn2 {
+      background-color: #0398d3;
+      border: 2px solid #0398d3;
+    }
   }
-  .btn2 {
-    background-color: #0398d3;
-    border: 2px solid #0398d3;
-  }
+  
+  
+   
+ 
+  
   .languageTool {
     justify-content: space-around;
     align-items: center;

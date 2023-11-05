@@ -19,7 +19,7 @@ const MCP = () => {
               Coder{" "}
               <span>Under The Guidance Of Top Competitive Programmers</span>
             </p>
-            <RazorPay amount={25000} name={"Master Competitive Programming"}/>
+            <RazorPay amount={25000} name={"Elevation Academy Batch -Master Competitive Programming"} btn={"Enroll"}/>
           </div>
           <img
             src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/mcp-header-image.webp"
@@ -135,7 +135,8 @@ const MCP = () => {
             <div className="btnsection flex flex-column">
               <div className="enroll-money">₹ 25000</div>
               
-                <button className="btn1">Enroll Now</button>
+              <RazorPay amount={25000} name={"Elevation Academy Batch -Master Competitive Programming"} btn={"Enroll "}/>
+                
               
             </div>
           </div>
@@ -338,6 +339,10 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     margin-left:4rem;
+    button{
+      width:10vw;
+      padding: 0.5rem 1.5rem;
+    }
   }
   .btn1 {
     font-size: 2rem;

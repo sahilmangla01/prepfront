@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import { Button } from './Components/Styles/Button';
 
-const RazorPay = ({amount,id ,name}) => {
+const RazorPay = ({amount,id ,name , btn}) => {
   
 
     const handlePayment=async()=>{
@@ -33,12 +33,12 @@ const RazorPay = ({amount,id ,name}) => {
                     .then((res)=>console.log(res.data))
                     .catch(err=>console.log(err))
                     }
-                    if(name==="FullStack Programe"){
+                    if(name==="Elevation  Academy Batch -FullStack Programe"){
                       await axios.post('https://prep-clone.onrender.com/api/fullstack',{userId:userId ,name:name })
                       .then((res)=>console.log(res.data))
                     .catch(err=>console.log(err))
                    }
-                   else if(name==="Master Competitive Programming"){
+                   else if(name==="Elevation Academy Batch -Master Competitive Programming"){
                     await axios.post('https://prep-clone.onrender.com/api/master',{userId:userId ,name:name })
                     .then((res)=>console.log(res.data))
                   .catch(err=>console.log(err))
@@ -67,7 +67,7 @@ const RazorPay = ({amount,id ,name}) => {
 
     return (
         <div>
-            <Button onClick={handlePayment}>BUY NOW</Button>
+            <Button onClick={handlePayment}>{btn}</Button>
         </div>
     )
 }

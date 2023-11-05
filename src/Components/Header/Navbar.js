@@ -154,13 +154,13 @@ const Wrapper = styled.section`
         .logout{
             color:orangered;
             font-size:1.7rem;
-            padding:1rem 1.5rem;
+            padding:1.5rem 1.5rem;
             width:100%;
         }
         div{
             align-items:center;
             border-bottom: 2px solid gainsboro;
-            padding-bottom:1rem;
+            padding:1rem 0;
             
             
             img{

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ContextProvider } from '../Context/ContextApi'
-import { Button } from '../Styles/Button'
 import RazorPay from '../../RazorPay'
 
 const MockTest = () => {
@@ -45,7 +44,7 @@ const MockTest = () => {
                     <p>{e.Participants} Participants</p>
                     <p>{e.duration} duration</p>
                   </div>
-                  <RazorPay amount={100} id={e._id} />
+                  <RazorPay amount={100} id={e._id} btn = {"Buy Now"} />
                   {/* <button className='icons'><FaArrowRight /></button> */}
               </div>
               
@@ -69,7 +68,7 @@ const MockTest = () => {
                   <img src={e.img} alt={e.name}/>
                   <div className='name'>{e.name}</div>
                   
-                  <Button>Buy Now</Button>
+                  <RazorPay amount={100} id={e._id} btn={"Buy Now"} />
                   {/* <button className='icons'><FaArrowRight /></button> */}
               </div>
               

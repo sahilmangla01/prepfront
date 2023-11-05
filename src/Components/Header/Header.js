@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     box-shadow:0px 1px 10px 0px #D0D4CA;
     position:sticky;
     top:0;
-    z-index:9999;
+    z-index:10;
     img{
         width:17rem;
     }
