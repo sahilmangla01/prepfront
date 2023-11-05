@@ -527,6 +527,96 @@ const Wrapper = styled.section`
         }
     }
   }
+
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    .syllabus{
+      margin:5rem auto;
+    }
+    .syllabus-top-heading{
+      flex-direction:column;
+      text-align:center;
+      button{
+        margin:3rem 0;
+      }
+    }
+    .text{
+      width:100%;
+      text-align:center;
+    }
+    .syllabus-content{
+      padding:0;
+      margin:4rem 0;
+      .syllabus-content-top div p {
+        line-height:3rem;
+      }
+      .syllabus-content-top {
+        div{
+          align-items:flex-start;
+          p{
+            width:60%;
+          }
+          span{
+            
+            padding:1rem;
+          }
+        }
+        .content-text{
+          width:100%;
+          font-weight:100;
+          margin:3rem 0 2rem;
+        }
+      }
+      .syllabus-content-bottom{
+        padding:2rem ;
+        button{
+          padding:1rem 2rem;
+          width:85%;
+          font-size:1.5rem;
+          background-color:white;
+          box-shadow: 0 3px 6px gainsboro;
+        }
+      }
+    }
+    .text{
+      text-align:left;
+    }
+    .stack-syllabus{
+      margin:0;
+    }
+    ul{
+      flex-direction:column;
+      li{
+        width:100%;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        padding:0.5rem 2rem 0.5rem 0;
+      }
+    }
+    .projects{
+      .project-card{
+        text-align:center;
+      }
+    }
+  }
+
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    ul{
+      li{
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+      }
+    }
+    .projects{
+      justify-content:space-between;
+      .project-card{
+        margin:2rem auto;
+        width:47%;
+        text-align:center;
+      }
+    }
+  }
 `;
 
 export default FullstackSyllabus;

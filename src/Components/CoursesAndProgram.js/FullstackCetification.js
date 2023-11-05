@@ -48,7 +48,7 @@ const Wrapper = styled.section`
             width:50%;
             padding:1rem 5rem;
            
-            }
+            
         }
 
         .certification-left-box{
@@ -81,6 +81,32 @@ const Wrapper = styled.section`
             width:80%;
             margin-top:3rem;
         }
+
+        @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+            flex-direction:column;
+            p{
+                margin:4rem;
+            }
+            .certification-left{
+                width:100vw;
+                padding:1rem 2rem;
+            }
+            .certification-right{
+                width:100vw;
+                text-align:center;
+                padding:1rem 2rem;
+            }
+            .certification-left-box{
+                margin-top:5rem;
+                span{
+                    margin-left:2rem;
+
+                }
+            }
+            .certificate-img{
+                width:90%;
+            }
+        }     
 
 `
 

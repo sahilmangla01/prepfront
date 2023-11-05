@@ -75,6 +75,58 @@ h1{
     }
 }
 
+@media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    .mentors{
+        justify-content:space-between;
+    }
+    .mentor-info{
+        width:45%;
+        height:35vh;
+        margin:5rem auto;
+        text-align:center;
+        p{
+            font-size:2.5rem;
+            margin:5rem 0 0rem;
+        }
+        .description{
+            font-size:2rem;
+            margin-top:2rem;
+        }
+        img{
+            left:50%;
+            transform:translateX(-50%);
+        }
+    }
+   
+}
+
+@media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    padding:5rem 2rem;
+    h1{
+        font-size:3rem;
+        text-align:center;
+
+    }
+    .mentor-info{
+        width:100%;
+        margin:5rem auto;
+        height:70vh;
+        text-align:center;
+        p{
+            font-size:3rem;
+            margin:5rem 0 0rem;
+        }
+        .description{
+            font-size:2rem;
+            margin-top:4rem;
+        }
+        img{
+            left:50%;
+            transform:translateX(-50%);
+        }
+    }
+}
+
 
 `
 

@@ -100,6 +100,31 @@ const Wrapper = styled.section`
         margin-left:10rem;
         
     }
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        .payment{
+            width:60%;
+        }
+        .guarantee{
+            font-size:1.5rem;
+        }
+    }
+
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        padding:5rem 0;
+        .payment{
+            width:85vw;
+        }
+        h2{
+            font-size:2.5rem;
+        }
+        img{
+            width:45vw;
+        }
+        .Lpa{
+            width:80vw;
+            margin:2rem auto;
+        }
+    }
 `
 
 export default PaymentPlans

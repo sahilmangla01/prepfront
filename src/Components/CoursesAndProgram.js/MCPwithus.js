@@ -189,6 +189,103 @@ const Wrapper = styled.section`
   .companyimg{
     width:70vw;
   }
+
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    div{
+        .left{
+            left:-5vw;
+        }
+        .right{
+            right:-5vw;
+        }
+    }
+    ul{
+        li{
+            padding:1rem;
+            width:80%;
+            div{
+                margin:0 0.5rem;
+            }
+            p{
+                width:20rem;
+            }
+            .image{
+                width:7rem;
+            }
+            img{
+                padding:2rem 1.5rem;
+            }
+        }
+    }
+
+    .stats{
+        padding: 6rem 0;
+        justify-content:space-between;
+    }
+    .heading{
+        font-size:3.4rem;
+    }
+    .companyimg{
+        width:90vw;
+        margin:auto;
+    }
+  }
+
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    .heading{
+        margin:4rem 0;
+        font-weight:bold;
+    }
+    .mainImage{
+        display:none;
+    }
+    div{
+        flex-direction:column;
+        
+        .left,.right{
+            position:static;
+            text-align:left;
+        }
+        .left{
+            li{
+                flex-direction:row-reverse;
+            }
+        }
+    }
+    ul{
+        li{
+            padding:1rem 0;
+            div{
+                width:80%;
+            }
+            .image{
+                
+                box-shadow:none;
+            }
+            img{
+                padding:2rem 1.5rem;
+            }
+            p{
+                width:100%;
+                margin:3px 0;
+            }
+        }
+    }
+    .stats{
+        padding: 3rem 6rem;
+        div{
+            margin-bottom:4rem;  
+        }
+        h1{
+            font-weight:bold;
+            margin-bottom:1rem;
+        }
+    }
+    .companyimg{
+        width:100%;
+    }
+  }
+
 `
 
 export default MCPwithus

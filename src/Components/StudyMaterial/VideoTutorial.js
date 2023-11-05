@@ -30,7 +30,7 @@ const VideoTutorial = () => {
             video.map((item,index)=>{
               return(
                 <div className='flex flex-column video' key={index}>
-                  <ReactPlayer width="18vw" height="30vh" url={item.video} controls/>
+                  <ReactPlayer width="100%" height="100%" url={item.video} controls/>
                   <h1>{item.name}</h1>
                 
                 </div>
@@ -94,6 +94,71 @@ const Wrapper = styled.section`
     margin:4rem 0 0;
     border-bottom: 3px solid #3969ad;
   
+  }
+
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    .videoHeader{
+      width:100vw;
+      padding:3rem;
+      flex-direction:column-reverse;
+      img{
+        width:90vw;
+        margin-bottom:2rem;
+      }
+      .Heading{
+        width:90vw;
+        div{
+          font-size:2.5rem;
+          margin: 2rem 0;
+        }
+      }
+    }
+
+    .video-body{
+      .video{
+        width:100%;
+        margin:1.5rem 0;
+        h1{
+          width:100%;
+          font-size:1.7rem;
+          font-weight:bold;
+          line-height:2.4rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    .videoHeader{
+      width:100vw;
+      padding:3rem;
+      img{
+        width:50%;
+      }
+      .Heading{
+        width:50vw;
+        div{
+          font-size:3rem;
+        }
+        p{
+          font-size:1.7rem;
+        }
+      }
+    }
+
+    .video-body{
+
+      .video{
+        width:43vw;
+        h1{
+          width:40vw;
+          font-size:2rem;
+          font-weight: bold;
+
+        }
+      }
+    }
+   
   }
 
 `

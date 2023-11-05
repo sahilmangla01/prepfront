@@ -34,6 +34,7 @@ const Testimonials = ({start,end,infinite}) => {
       }
   return (
     <Wrapper>
+        <div className='container'>
         <p>Testimonials</p>
         <h1>Our Students Speaks</h1>
        <Carousel infinite={infinite}  responsive={responsive}>
@@ -55,6 +56,7 @@ const Testimonials = ({start,end,infinite}) => {
             }
         </Carousel>
        
+        </div>
         
     </Wrapper>
   )
@@ -62,8 +64,9 @@ const Testimonials = ({start,end,infinite}) => {
 
 const Wrapper = styled.section`
 text-align:center;
-margin:9rem auto;
-width:120rem;
+.container{
+    margin:9rem auto;
+}
 
 
 h1{
@@ -73,20 +76,20 @@ color:#45474B;
 margin:2rem 0 5rem;
 }
 p{
-    font-size:2rem;
+    font-size:1.8rem;
   color:gray;
 }
 .testimonials{
     margin:1rem;
     padding:5rem 2rem;
     width:24vw;
-    height:55vh;
+    height:auto;
     border-radius:2rem;
     text-align:justify;
     box-shadow: 0 10px 30px rgba(95,141,196,.2);
     .description{
         overflow-y:scroll;
-        height:25vh;
+        min-height:25vh;
     }
     img{
         margin: 0 1rem 2rem 0;
@@ -120,5 +123,37 @@ p{
     font-size: 4rem;
     font-weight: bold;
 }
+@media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    .testimonials{
+        width:40vw;
+        height:40vh;
+        margin-bottom:4rem;
+        .description{
+            font-size:2rem;
+            margin:2rem 0;
+            height:20vh;
+        padding-bottom:2rem;
+        }
+    }
+    .react-multiple-carousel__arrow--left {
+        left:70vw;  
+    }
+    p{
+        font-size:2.5rem;
+    }
+    h1{
+        font-size:4rem;
+    }
+    h2{
+        font-size:3rem;
+    }
+}
+
+@media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    .testimonials{
+        width:100%;
+    }
+}
+
 `
 export default Testimonials

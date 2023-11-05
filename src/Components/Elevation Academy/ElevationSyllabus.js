@@ -7,6 +7,7 @@ const ElevationSyllabus = () => {
     const[value,setValue]=useState(0)
   return (
     <Wrapper>
+        <div className='container'>
         <h1>Program Syllabus</h1>
         <p>Learn from the best and be prepared to crack full stack</p>
         <p>developer jobs</p>
@@ -310,7 +311,7 @@ const ElevationSyllabus = () => {
             </div>: ""
             }
         </div>
-
+        </div>
     </Wrapper>
   )
 }
@@ -318,7 +319,7 @@ const ElevationSyllabus = () => {
 const Wrapper = styled.section`
 text-align:center;
         margin:9rem auto;
-        width:120rem;
+        
         
 
 h1{
@@ -453,6 +454,25 @@ p{
             margin: 10px;
             background: #fff;
             font-size:2rem;
+        }
+    }
+
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        h2{
+            font-size:1.5rem;
+            text-align:left;
+        }
+       
+        .syllabus-content{
+            padding:1.5rem ;
+            align-items:center;
+            div{
+                width:80%;
+                align-items:center;
+                .number{
+                    width:20%;
+                }
+            }
         }
     }
 

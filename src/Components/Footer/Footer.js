@@ -9,15 +9,17 @@ import {
 
 import { MdMessage } from "react-icons/md";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <Wrapper>
+      
       <div className="container">
         <div className="grid grid-three-column">
          
-        
-            <div>
+         <div className="flex flex-column">
+         <div>
               <h1>Follow us</h1>
               <div className="flex">
                 <FaFacebookSquare className="icons" />
@@ -26,35 +28,6 @@ const Footer = () => {
                 <FaYoutube className="icons" />
               </div>
             </div>
-
-            
-          
-
-          
-          
-            <div >
-              <h1>Latest Articles</h1>
-              <div className="article-text">
-                Cal Command in linux with Examples Head Command Linux Examples
-                SAR Command Linux Monitor System Performance IPtables Command in
-                Linux with Examples rm command Linux Examples
-              </div>
-            </div>
-
-            
-          
-
-         
-        
-            <div className="QuickLinks">
-              <h1>Quick Links</h1>
-              <div>Mock Tests</div>
-              <div>Video Tutorial</div>
-              <div>Master Programming</div>
-              <div>Elevation Academy</div>
-              <div>About us</div>
-            </div>
-          
 
             <div>
               <h1>Contact Us</h1>
@@ -70,7 +43,23 @@ const Footer = () => {
                 <div></div>
               </div>
             </div>
+         </div>
+        
+          
 
+            
+          
+
+          <div className="flex flex-column">
+          <div >
+              <h1>Latest Articles</h1>
+              <div className="article-text">
+                Cal Command in linux with Examples Head Command Linux Examples
+                SAR Command Linux Monitor System Performance IPtables Command in
+                Linux with Examples rm command Linux Examples
+              </div>
+              
+            </div>
 
             <div >
               <h1>Popular Articles</h1>
@@ -80,13 +69,38 @@ const Footer = () => {
                 Questions Django Interview Questions MongoDB Interview Questions
               </div>
             </div>
+          </div>
+          
+            
+
+            
+          
+
+         
+        
+            <div className="QuickLinks">
+              <h1>Quick Links</h1>
+              <NavLink to="/mock-test"><div>Mock Tests</div></NavLink>
+              <NavLink to="video-tutorial"><div>Video Tutorial</div></NavLink>
+              <NavLink to="master-competitive-programming"><div>Master Programming</div></NavLink>
+              <NavLink to="full-stack-program"><div>Fullstack Program</div></NavLink>
+              <NavLink to="elevation-academy"><div>Elevation Academy</div></NavLink>
+              
+              
+            </div>
+          
+
+            
+
+
+            
 
 
         </div>
 
         <div className="flex copyrightBox">
             <div>Copyright©2023</div>
-            <div className="flex">
+            <div className="flex policy">
               <div>Privacy Policy</div>
               <div>Refund Policy</div>
               <div>Terms of Use</div>
@@ -106,6 +120,7 @@ const Wrapper = styled.section`
   .QuickLinks{
     margin-left:5rem;
     div{
+      color:gray;
       font-size:2rem;
       margin:0 0 .8rem
     }
@@ -156,6 +171,34 @@ const Wrapper = styled.section`
     }
   }
 
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    padding:4rem 2rem;
+    .grid{
+      gap:0;
+    }
+    .contactBox{
+      margin-right:2rem;
+    }
+  }
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    padding:4rem 2rem;
+    .grid-three-column{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .QuickLinks{
+      margin:0;
+    }
+    .copyrightBox {
+      flex-direction:column;
+    }
+    .policy{
+      justify-content:space-between;
+      margin-top:2rem;
+    }
+    .copyrightBox .flex{
+      width:100%;
+    }
+  }
   .
 `;
 

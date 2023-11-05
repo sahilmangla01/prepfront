@@ -32,6 +32,7 @@ const Student1 = () => {
       }
   return (
     <Wrapper>
+        <div  className='container'>
         <h1>This Might Be You !</h1>
         <Carousel responsive={responsive} infinite={true}>
                {
@@ -52,13 +53,13 @@ const Student1 = () => {
 
                 
 </Carousel>;
+        </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-    width:130rem;
-    margin: 0 auto;
+  
     h1{
         text-align:center;
         font-size:3rem;
@@ -76,6 +77,7 @@ const Wrapper = styled.section`
         color:gray;
         padding:0 3rem;
         line-height:2.3rem;
+        text-align:justify;
     }
 
     .student{
@@ -94,6 +96,7 @@ const Wrapper = styled.section`
     .react-multiple-carousel__arrow--left {
         background-color:#0398d3;
         border:2px solid #0398d3;
+        top:20rem;
         
        
     }
@@ -101,12 +104,32 @@ const Wrapper = styled.section`
         background-color:#0398d3;
         border:2px solid #0398d3;
         right:-.1rem;
+        top:20rem;
        
     }
     .react-multiple-carousel__arrow:hover{
         background-color:#0398d3;
     }
 
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+       
+        .student{
+            width:35rem;
+            margin: 0 2rem;
+            padding:3rem;
+        }
+    }
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        .student{
+            width:90vw;
+            margin:0 ;
+            padding:3rem;
+            .hired{
+                width:30%;
+            }
+        }
+
+    }
 
 `
 export default Student1

@@ -6,6 +6,7 @@ import FSPJourney from "./FSPJourney.js";
 import FullStackmentors from "./FullStackmentors";
 import FullstackCetification from "./FullstackCetification";
 import FullstackSyllabus from "./FullstackSyllabus";
+import RazorPay from "../../RazorPay.js";
 
 const FullstackProgram = () => {
   return (
@@ -49,7 +50,7 @@ const FullstackProgram = () => {
           <h1>SELECT BATCH</h1>
 
           <div className="radio flex">
-            <input type="radio" id="first" name="enroll" />
+            <input type="radio" id="first" name="enroll" checked={true} />
             <div className="flex flex-column">
               <label htmlFor="first">1st May</label>
               <p>Enrollment Started</p>
@@ -67,7 +68,7 @@ const FullstackProgram = () => {
             <div className="btnsection flex flex-column">
               <div className="enroll-money">₹ 30000</div>
               <div>
-                <button className="btn1">Enroll Now</button>
+                <RazorPay className="btn1" amount={30000} name={"FullStack Programe"}/>
                 <button className="btn2">Try for Free</button>
               </div>
             </div>
@@ -268,7 +269,7 @@ const FullstackProgram = () => {
           </div>
         </div>
 
-        <div>
+        <div className="annual">
           <h1>Annual Salary</h1>
           <img
             src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/machine-learning/download.svg"
@@ -292,10 +293,12 @@ const FullstackProgram = () => {
 };
 
 const Wrapper = styled.section`
-  text-align: center;
+  // text-align: center;
 
   .bigImg {
     width: 80vw;
+    margin-left:50%;
+    transform:translateX(-50%);
   }
 
   .stats {
@@ -370,7 +373,8 @@ const Wrapper = styled.section`
     }
   }
   .stackProgram {
-    width: 140rem;
+    width: 100rem;
+    text-align:center;
     justify-content: space-between;
     align-items: center;
     img {
@@ -379,15 +383,18 @@ const Wrapper = styled.section`
   }
   .program-right {
     justify-content: space-between;
+    align-items:flex-start;
+    margin:0 3rem;
     height: 40vh;
     p {
-      font-size: 3rem;
+      font-size: 2.5rem;
       width: 60rem;
       margin-bottom: 5rem;
     }
     div {
       justify-content: space-around;
       align-items: center;
+      margin:0 auto;
     }
     img {
       width: 5rem;
@@ -426,7 +433,7 @@ const Wrapper = styled.section`
     img {
       width: 15vw;
       background: linear-gradient(45deg, white, #b6fffa);
-      border-radius: 2rem;
+      border-radius: 1rem;
     }
   }
 
@@ -437,7 +444,7 @@ const Wrapper = styled.section`
     div {
       padding: 2rem;
       background-color: white;
-      border-radius: 2rem;
+      border-radius: 1rem;
       margin: 2rem 0;
 
       p {
@@ -529,6 +536,287 @@ const Wrapper = styled.section`
       color: gray;
       margin-top: 1rem;
     }
+  }
+
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    .fullstack{
+      padding: 0 2rem;
+      .Head{
+        img{
+          width:25vw;
+        }
+        .heading1{
+          padding:2rem 0;
+        }
+        .heading2{
+          line-height:3rem;
+          padding:2rem 0;
+        }
+        button{
+          width:80%;
+        }
+      }
+    }
+    .Headright{
+      padding:3rem;
+      div{
+        width:100%;
+      }
+    }
+
+    .enrollment{
+      width:100vw;
+    }
+    .enroll{
+      width:90vw;
+      flex-wrap:wrap;
+      h1{
+        font-size:2.5rem;
+        position:relative;
+        top:5rem;
+        margin-right:2rem;
+      }
+      .radio{
+        width:25vw;
+      }
+    }
+    .btnsection{
+      margin:3rem 0 3rem 20rem;
+    }
+
+    .languageTool{
+      margin:5rem auto 20rem;
+      align-items:baseline;
+      text-align:center;
+
+      h1{
+        font-size:3.5rem;
+      }
+      p{
+        font-size:2.5rem;
+      }
+
+    }
+    .stackProgram{
+      width:100vw;
+      margin:3rem 0;
+      img{
+        width:50%;
+      }
+    }
+    .program-right{
+      width:50%;
+      height:30vh;
+      padding:2rem 3rem;
+      p{
+        width:100%;
+      }
+      img{
+        width:5rem;
+      }
+    }
+    .hire-roles{
+      text-align:center;
+      margin:3rem 0;
+    }
+    .roles-card{
+      flex-wrap:wrap;
+      .card{
+        padding: 1.5rem 0;
+        margin:30px auto;
+        width:42vw;
+        p{
+          width:30vw;
+          margin:0 auto 3rem;
+          line-height:3rem;
+        }
+        
+      }
+    }
+    .stats{
+      width:100vw;
+      padding:10rem 3rem;
+      text-align:center;
+      .stats-left{
+        width:50%;
+        margin-right:4rem;
+      }
+      .growth{
+        width:100%;
+        text-align:left;
+        p{
+          line-height:2rem;
+        }
+        div{
+          padding:1rem;
+          align-items: flex-start;
+        }
+        .growthcontent{
+          width:100%;
+        }
+      }
+    }
+
+    .annual{
+      width:50%;
+      img{
+        margin: 4rem auto;
+        width:100%;
+
+      }
+    }
+    
+    .bigImg{
+      width: 100vw;
+      padding: 0 2rem;
+    }
+
+  }
+
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+      .fullstack{
+        flex-direction:column;
+        position:relative;
+      }
+      .Head{
+        padding:0 2.3rem;
+        width:100vw;
+        h1{
+          font-size:2rem;
+        }
+        img{
+          width:60%;
+          
+        }
+        .heading1, .heading2{
+          padding:2rem 3rem 2rem 0;
+        }
+        .heading1{
+          font-size:2.5rem;
+          padding-bottom:0;
+        }
+        button{
+          width:70%;
+          margin-bottom:4rem;
+        }
+      }
+
+      .Headright{
+        width:100vw;
+        padding:3rem 0;
+        margin-top :0;
+        position:absolute;
+        bottom:-40rem;
+        div{
+          box-shadow: 0 10px 30px #A9A9A9;
+          width:85%;
+          margin:1.5rem auto ; 
+        }
+      }
+      .enrollment{
+        margin-top:40rem;
+       
+      }
+      .enroll{
+        width:100vw;
+        flex-direction:column;
+        border-top:2px solid gainsboro;
+
+        .radio{
+          width:70%;
+          margin:2rem 0 0;
+        }
+      }
+      .btnsection{
+        margin: 2rem 0;
+      }
+
+      .languageTool{
+        flex-direction:column;
+        margin:3rem auto;
+        text-align:center;
+        h1{
+          padding: 1rem 2rem;
+        }
+        p{
+          padding:0rem 2rem;
+        }
+        img{
+          width:80vw;
+          margin:3rem auto;
+        }
+      }
+
+      .stackProgram{
+        width:100vw;
+        flex-direction:column;
+        img{
+          width:100vw;
+        }
+      }
+      .program-right{
+        width:90vw;
+        margin: 4rem auto; 
+        img{
+          width:10vw;
+        }
+        p{
+          width:100%;
+          text-align:center;
+        }
+      }
+
+      .hire-roles{
+        text-align:center;
+
+      }
+      .roles-card{
+          flex-direction:column;
+          .card{
+            width:85vw;
+            padding:15px 0;
+            p{
+              width:95%;
+              margin:0 auto 2rem;
+            }
+            div{
+              justify-content:space-around;
+            }
+          }
+      }
+
+      .stats{
+        width:100vw;
+        padding:5rem 2rem;
+        text-align:center;
+        flex-direction:column;
+        .stats-left{
+          width:100%;
+        }
+        .growth{
+          width:100%;
+          margin:4rem 0 0;
+          flex-direction:column;
+          div{
+            padding:1rem 2rem 2rem;
+            text-align:left;
+            align-items: flex-start;
+          }
+         .growthcontent{
+          padding:0 1.5rem;
+         }
+        }
+      }
+      .annual{
+        width:100%;
+        img{
+          width:80%;
+        }
+      }
+      .bigImg{
+        width: 100vw;
+        padding: 0 2rem;
+      }
   }
 `;
 

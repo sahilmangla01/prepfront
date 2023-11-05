@@ -290,7 +290,96 @@ const Wrapper = styled.section`
         }
 
     }
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        width:100vw;
+        margin:0 auto;
+        .testdetails{
+            flex-direction:column;
+            text-align:center;
+        }
+        .test-right{
+            width:100vw;
+            p{
+                margin:2rem auto;
+            }
+        }
+        .test-left{
+            margin:2rem  auto;
+            img{
+                width:80vw;
+                marginleft:20%;
+            }
+        }
+        button{
+            margin:2rem auto;
+        }
+    }
 
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        width:100vw;
+        margin:0 auto;
+        .testdetails{
+            flex-direction:column;
+            text-align:center;
+        }
+        .test-right{
+            width:100vw;
+            p{
+                width:80%;
+                margin:2rem auto;
+            }
+        }
+        .test-left{
+            margin:2rem  auto;
+            img{
+                width:80vw;
+                padding:0;
+            }
+        }
+        button{
+            width:50vw;
+            margin:2rem auto;
+        }
+        .metrics{
+            padding:4rem 0;
+            flex-wrap:wrap;
+            .metrics-content{
+                margin:2rem ;
+            }
+        }
+        .faq{
+            width:100vw;
+            h1{
+                font-size:2.5rem;
+            }
+
+        }
+        .faq-type{
+            flex-direction:column;
+            .options{
+                width:70vw;
+                text-align:center;
+                margin:2rem auto 0;
+            }
+        }
+        .questions{
+            margin:4rem 2rem;
+            .question-content{
+                padding:2rem ;
+                color:gray;
+            }
+            .question-options div{
+                padding:2rem 1rem;  
+                p{
+                    width:80%;
+                    font-size:1.5rem;
+                }
+            }
+        }
+        .icon{
+            width:30%;
+        }
+    }
 
 `
 

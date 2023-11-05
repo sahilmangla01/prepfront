@@ -48,7 +48,7 @@ h2{
     font-size:2rem;
     text-align:left;
     margin-top:4rem;
-    padding:0 3rem 2rem;
+    padding:0 2rem 2rem;
     
 }
 
@@ -88,7 +88,7 @@ p{
     p{
         font-size:1.5rem;
         
-    padding:0 1rem 2rem 3rem;
+    padding:0 2rem 2rem 2rem;
     }
 
 
@@ -100,11 +100,30 @@ p{
     text-align:justify;
 
 }
+::-webkit-scrollbar {
+    width: 0px;
+  }
 .companyimg{
     width:10rem;
     margin:1rem auto;
 }
 
+@media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    padding:8rem 0;
+    .mentors{
+        justify-content:space-around;
+        padding:2rem;
+    }
+    .mentor{
+        margin:4rem auto;
+    }
+}
+@media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    padding:4rem 1rem;
+    .mentor{
+        margin:2.5rem auto 1rem;
+    }
+}
 `
 
 export default Mentors

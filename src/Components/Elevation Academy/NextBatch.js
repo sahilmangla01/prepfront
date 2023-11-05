@@ -10,7 +10,7 @@ const NextBatch = () => {
                 <h1>How can you be part of the next batch</h1>
                 <p>Experts mentors designed to get you job-ready, designed for complete beginners as well. All this with absolute zero cost including real-time assignments that help you practice what you have learnt. for complete beginners as well.</p>
             </div>
-            <div className='flex'>
+            <div className='next-batch flex'>
                 <div className='next-batch-left'>
                     <div onClick={()=>setVal(0)} className={val===0?"selected details":'details'}>
                         <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/registeration-icon.webp'alt='detail'/>
@@ -122,6 +122,7 @@ const Wrapper = styled.section`
         margin:5rem 0 5rem 2rem;
     }
     .next-batch-right{
+        width:70vw;
         margin:5rem 0;
         padding: 2rem 5rem;
         background-color:white;
@@ -162,7 +163,67 @@ const Wrapper = styled.section`
         color:#f78077;
         margin-right:2rem;
     }
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        padding:5rem 0;
+         .next-batch-left {
+            margin: 5rem  0;
+            width:40%;
+        }
+        .next-batch-right{
+            padding: 2rem 4rem   ;
+            width:60%;
+        }
+       
+        .details{
+            width:100%;
+        }
+        ul{
+            margin:2rem 0;
+            li{
+                padding:2rem 0 0 0;
+                display:flex;
+                align-items:center;
+            }
+        }
+        
+    }
 
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        padding:5rem 0;
+        .next-batch{
+            flex-direction:column;
+        }
+        h1{
+            width:80vw;
+            font-size:3rem;
+            margin:2rem 0;
+        }
+        p{
+            width:80vw;
+            font-size:1.8rem;
+        }
+        .next-batch-left{
+            
+            margin:3rem auto;
+        }
+        .next-batch-right{
+            margin:3rem auto;
+            padding:2rem ;
+            width:80vw;
+        }
+        ul{
+            margin:3rem 0;
+            li{
+                display:flex;
+                align-items:center;
+                padding:2rem 0;
+                justify-content:space-between;
+            }
+        }
+        .icon{
+            width:15vw;
+        }
+    }
 
 `
 export default NextBatch

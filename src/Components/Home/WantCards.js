@@ -5,8 +5,8 @@ import {FaArrowRight}  from "react-icons/fa";
 const WantCards = () => {
   return (
     <Wrapper>
-        <h1 className='text'>I want to</h1>
-        <div className='flex'>
+        <div className="container"><h1 className='text'>I want to</h1>
+        <div className='flex CARDS'>
             <div className='want-cards'>
                 
                 <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/prepare_for_campus.webp' alt='mock'/>
@@ -24,7 +24,7 @@ const WantCards = () => {
                 <button className='icons'><FaArrowRight /></button>
             </div>
         </div>
-
+</div>
     </Wrapper>
   )
 }
@@ -77,6 +77,25 @@ const  Wrapper = styled.section`
     .want-cards:hover{
         box-shadow:0 4px 20px 0 gray; 
 
+    }
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        .CARDS{
+            width:90vw;
+            flex-wrap:wrap;
+        }
+        .want-cards{
+            width:40vw;
+        }
+    }
+
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        .CARDS{
+            width:90vw;
+            flex-wrap:wrap;
+        }
+        .want-cards{
+            width:80vw;
+        }
     }
     
 

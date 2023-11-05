@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Button } from "../Styles/Button";
+// import { Button } from "../Styles/Button";
 import MCPwithus from "./MCPwithus";
 import MCPCurriculum from "./MCPCurriculum";
 import Student1 from "../carousel/Student1";
+import RazorPay from "../../RazorPay";
 
 const MCP = () => {
   const [color,setColor] =useState(0)
@@ -18,7 +19,7 @@ const MCP = () => {
               Coder{" "}
               <span>Under The Guidance Of Top Competitive Programmers</span>
             </p>
-            <Button>Enrol Now</Button>
+            <RazorPay amount={25000} name={"Master Competitive Programming"}/>
           </div>
           <img
             src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/mcp-header-image.webp"
@@ -58,9 +59,9 @@ const MCP = () => {
         </div>
 
         <div className="mentors">
-        <p>Get Guidance From Industry Leading Mentors</p>
+        <p className="mentortitle">Get Guidance From Industry Leading Mentors</p>
         <div>
-          <p>Other Mentors You Will Be Interacting With</p>
+          <p className="mentorpara">Other Mentors You Will Be Interacting With</p>
           <div className="flex mentorList">
           <div className="mentor ">
             <img
@@ -150,7 +151,6 @@ const MCP = () => {
 const Wrapper = styled.section`
   margin: 5rem 0;
   .container {
-    width: 110rem;
     text-align:center;
   }
 
@@ -351,6 +351,166 @@ const Wrapper = styled.section`
     border: 2px solid #0398d3;
   }
   
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    margin:3rem 0 ;
+    .mcpHead{
+      flex-direction:column-reverse;
+      div{
+        h1{
+          margin:2rem 0 0;
+          width:100%;
+          font-size:2.5rem;
+        }
+        p{
+          width:100%;
+        }
+        button{
+          width:50%;  
+        }
+      }
+    }
+
+    .heighlights{
+      flex-direction:column;
+    }
+    .heighlight{
+      width:100%;
+      
+      border-radius:4px;
+      p{
+        width:80%;
+        font-size:1.5rem;
+        text-align:left;
+      }
+    }
+
+    .mentors{
+      .mentortitle{
+        font-size:2.5rem;
+
+      }
+      
+      div{
+        .mentorpara{
+          background-color:#0398d3;
+          color:white;
+          margin-top:3rem;
+          padding:2rem 1rem;
+          font-size:1.5rem;
+        }
+      }
+      .mentorList{
+        flex-direction: column;
+      }
+      .mentor{
+        width:90%;
+        justify-content:normal;
+        position:relative;
+        top:-2rem;
+        margin:1rem auto;
+        background-color:white;
+        .company{
+          width:100%;
+        }
+        div{
+          margin-left:1rem;
+          width:80%;
+          p{
+            color:gray;
+            margin:0.5rem 0;
+          }
+        }
+      }
+    }
+
+    .enrollment{
+      width:100vw;
+      padding:4rem 0;
+    }
+    .enroll{
+      width:90vw;
+      flex-direction:column;
+      h1{
+        margin:1.5rem 0;
+      }
+      .radio{
+        width:70%;
+        margin:1.5rem;
+      }
+    }
+    .btnsection{
+      margin-left: 0rem;
+    }
+
+  }
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+
+    .mcpHead{
+      margin-bottom:3.5rem;
+      div{
+        width:50%;
+        h1{
+          width:100%;
+          font-size:2.5rem;
+          line-height:normal;
+        }
+        p{
+          font-size:1.8rem;
+          line-height:normal  ;
+          margin:2rem 0;
+          width:100%;
+        }
+        button{
+          width:50%;
+        }
+      }
+      img{
+        width:40%;
+      }
+    }
+
+    .heighlight{
+      width:45%;
+      padding:1rem;
+      border-radius:4px;
+      p{
+        font-size:1.5rem;
+        width:25rem;
+      }
+
+    }
+
+    .mentors{
+      .mentor{
+        width:25rem;
+        justify-content:start;
+        padding:0 ;
+        margin: 1.5rem 1rem ;
+        img{
+          width:6rem;
+        }
+      }
+    }
+
+    .btnsection{
+     margin: 2rem 5rem;
+    }
+    .enroll-money{
+      font-size:4rem;
+    }
+    .enroll{
+      width:90vw;
+      flex-wrap:wrap;
+      h1{
+        font-size:3rem;
+        width:35%;
+      }
+      .radio{
+        width:20%;
+        margin-right:5rem;
+      }
+    }
+  }
  
 `;
 

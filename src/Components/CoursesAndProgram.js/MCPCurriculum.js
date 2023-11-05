@@ -243,6 +243,48 @@ const Wrapper = styled.section`
         border-radius: 10px;
       }
 
+      @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        align-items:normal;
+        .left{
+            width:45vw;
+            height:8vh;
+            justify-content:normal;
+            div{
+                width:40vw;
+
+            }
+            .leftTitle{
+               height:6vh;
+            }
+        }
+        .logo{
+            width:6rem;
+            margin:0 1.5rem;
+        }
+        .right{
+            width:40vw;
+            padding:2rem 0;
+
+        }
+        
+      }
+
+      @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        flex-direction:column;
+        div,.left,.right{
+            width:90vw;
+        }
+        .leftImg{
+            display:none;
+        }
+        .left{
+            div{
+                width:80%;
+                font-size:1.4rem;
+            }
+        }
+      }
+
 `;
 
 export default MCPCurriculum;

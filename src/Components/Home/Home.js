@@ -32,7 +32,7 @@ const Home = () => {
 
 
             <div className='flex backgroundJourney'>
-                <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/stairs_of_approach(web).svg' alt='stairsofapproach'/>
+                <img className='backImg' src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/stairs_of_approach(web).svg' alt='stairsofapproach'/>
                 <div className='JourneyChart'>
                 <div className='text'>How PrepBytes Mentorship driven Personalised Learning works?</div>
                         <div className='grid grid-two-column'>
@@ -340,6 +340,219 @@ const Wrapper = styled.section`
         padding:18rem 0 0rem;
         display:flex;
         justify-content:center;
+    }
+
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        .TopContainer{
+            flex-direction:column-reverse;  
+            img{
+                width:100vw;
+            }
+        }
+        .topHeading{
+            width:90vw;
+            margin:3rem auto;
+        }
+        .services img{
+            width:20vw;
+        }
+        .backgroundJourney{
+            flex-direction: column;
+            height: auto;
+            width: 100vw;
+            position:relative;
+            .backImg{
+                opacity: 0.1;
+                width:100vw;
+                position:absolute;
+                
+            }
+        }
+        .JourneyChart{
+         
+            width:90vw;
+            margin: 0 auto;
+
+            .right,.left{
+                width:20vw;
+            }
+            .JourneyCard{
+                h1{
+                    font-size:2rem;
+                }
+                div{
+                    width:30vw;
+                }
+            }
+            .text{
+                text-align:center;
+            }
+            div{
+               
+                margin:0 aut0;
+            }
+        }
+
+        .details .detail{
+            padding:3rem 0;
+            
+             margin: 6rem auto 30rem;
+        }
+        .detail-top{
+            flex-direction:column;
+            width:90vw;
+            margin:0 7%;
+            .top-left{
+                width:90%;
+                h2{
+                    margin:2rem;
+                }
+            }
+        }
+        .profile{
+            padding: 0 25%;
+        }
+        .top-right{
+            margin:3rem auto;
+            width:70vw;
+            text-align:center;
+        }
+        .detail-bottom{
+            flex-wrap:wrap;
+            width:80vw;
+            margin: 0 10%;
+            bottom:-52rem;
+            div{
+                width:30rem;
+                margin: 2rem 0;
+            }
+        }
+        .mentorimage{
+                padding-top:25rem;
+                img{
+                    width:90vw;
+                }
+        }
+    }
+
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        .TopContainer{
+            flex-direction:column-reverse;  
+            img{
+                width:100vw;
+            }
+        }
+        .topHeading{
+            width:90vw;
+            font-size:2.7rem;
+            margin:3rem auto;
+        }
+        .text{
+            font-size:2.5rem;
+        }
+        .services img{
+            width:20vw;
+        }
+        .backgroundJourney{
+            flex-direction: column;
+            height: auto;
+            width: 100vw;
+            position:relative;
+            .backImg{
+                opacity: 0.1;
+                width:100vw;
+                position:absolute;
+                
+            }
+        }
+        .JourneyChart{
+         
+            width:90vw;
+            margin: 0 auto;
+
+            .right,.left{
+                width:30vw;
+            }
+            .right{
+                right:-1rem;
+            }
+            .left{
+                left:4rem;
+            }
+            .goal{
+                width:40rem;
+            }
+            .JourneyCard{
+                h1{
+                    font-size:2rem;
+                }
+                div{
+                    width:45vw;
+                    padding:1.5rem;
+                }
+            }
+            .text{
+                text-align:center;
+                font-size:2.5rem;
+            }
+            div{
+               
+                margin:0 aut0;
+            }
+        }
+        .details .detail{
+            padding:3rem 0;
+            width:100vw;
+            //  margin: 6rem auto 30rem;
+        }
+        .detail-top{
+            flex-direction:column;
+            width:90vw;
+            margin:0 7%;
+            .top-left{
+                width:90%;
+                h2{
+                    margin:2rem;
+                }
+            }
+        }
+        .profile{
+            padding: 0 2%;
+        }
+        .top-right{
+            margin:3rem auto;
+            width:80vw;
+            text-align:center;
+            h1{
+                font-size:2rem;
+            }
+        }
+        .detail-bottom{
+            flex-wrap:wrap;
+            width:100vw;
+            
+            bottom:-34rem;
+            div{
+                
+    margin-bottom: 2rem;
+                width:15rem;
+                img{
+                    width:10vw;
+                }
+                h2{
+                    font-size:1.8rem;
+                }
+                p{
+                    font-size:1.5rem;
+                }
+            }
+        }
+        .mentorimage{
+                padding-top:25rem;
+                img{
+                    width:90vw;
+                }
+        }
     }
 `
 

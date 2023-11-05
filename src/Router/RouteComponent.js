@@ -9,6 +9,8 @@ import MCP from '../Components/CoursesAndProgram.js/MCP'
 import FullstackProgram from '../Components/CoursesAndProgram.js/FullstackProgram'
 import Project from '../Components/Projects/Project'
 import ElevationAcademy from '../Components/Elevation Academy/ElevationAcademy'
+import Dashboard from '../Components/DashBoard.js/Dashboard'
+
 
 
 const RouteComponent = () => {
@@ -22,6 +24,7 @@ const RouteComponent = () => {
         <Route path='/master-competitive-programming' element={<MCP/>}></Route>
         <Route path='/full-stack-program' element={<FullstackProgram/>}></Route>
         <Route path='/elevation-academy' element={<ElevationAcademy/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/:id' element={<Project/>}></Route>
     </Routes>
   )

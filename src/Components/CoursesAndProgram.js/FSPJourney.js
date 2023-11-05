@@ -15,32 +15,58 @@ const FSPJourney = () => {
         
 
        
-       <div className='flex'>
+       <div className='flex journey-box'>
         <div>
          
              
                 <div onClick={()=>setValue(0)} className='journey flex flex-column'>
               <div className='id'><h1>1</h1></div>
               <div className={value===0?"name name2":"name"}>Batch Commencement</div>
+              <ul>
+                    <li>Get access to dashboard & complete plan</li>
+                    <li>Access to recorded video lectures</li>
+                    <li>One live session with mentors per week</li>
+                    <li>Introduction with lead mentor for this program</li>
+                    <li>Access to Mock Tests</li>
+                    <li>Every live session will be of 2 hours duration</li>
+             
+              </ul>
             </div>
                 <div onClick={()=>setValue(1)} className='journey flex flex-column'>
               <div className='id'><h1>2</h1></div>
               <div className={value===1?"name name2":"name"}>Learn required languages, framework & tools</div>
+              <ul>
+              <li>Live online classes of Javascript, ReactJs, NodeJs,Express, HTML & CSS</li>
+              <li>Learn the industry wide used tools like MongoDB, Git & Jira</li>
+              </ul>
             </div>
 
             <div onClick={()=>setValue(2)} className='journey flex flex-column'>
               <div className='id'><h1>3</h1></div>
               <div className={value===2?"name name2":"name"}>Complete awesome real world projects</div>
+              <ul>
+              <li>HTML Blog Page</li>
+                    <li>Todo App</li>
+                    <li>Chat App</li>
+                    <li>Reminder Clock App</li>
+                    <li>React Blog</li>
+                    <li>E-commerce Web App</li>
+              </ul>
             </div>
 
             <div onClick={()=>setValue(3)} className='journey flex flex-column'>
               <div className='id'><h1>4</h1></div>
               <div className={value===3?"name name2":"name"}>Experience the complete development lifecycle</div>
+              <ul>
+              <li>Learn the Agile Development Methodology</li>
+              <li>Real time experience of complete software development lifecycle from development to deployment</li>
+              </ul>
             </div>
 
             <div onClick={()=>setValue(4)} className='journey flex flex-column'>
               <div className='id'><h1>5</h1></div>
               <div className={value===4?"name name2":"name"}>Be a certified Full Stack Developer</div>
+              <ul><li>Get certificate of course completion on completing projects, assignments & mock tests</li></ul>
             </div>
 
             
@@ -163,6 +189,9 @@ const Wrapper = styled.section`
     position:relative;
     height:16vh;
     justify-content:space-between;
+    ul{
+      display:none;
+    }
     .name{
       font-size:1.6rem;
       background: linear-gradient(45deg,rgba(48,35,174,.1),rgba(200,109,215,.1));
@@ -236,6 +265,110 @@ const Wrapper = styled.section`
     }
   }
 
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    h1{
+      font-size:4rem;
+    }
+    p{
+      font-size:2.5rem;
+      width:70%;
+    }
+    .journey-box{
+      div{
+        width:100vw;
+        .journey{
+          width:80%;
+          height:auto;
+          margin:1rem auto 3.5rem;
+          ul{
+            display:block;
+             text-align:left;
+            li{
+              display:flex;
+            align-items:center;
+              font-size:2rem;
+              margin:2rem ;
+              color:gray;
+            }
+            li::before{
+              margin-right:2rem ;
+              content:">";
+              font-size:3rem;
+              color:orange;
+            }
+          }
+          .name{
+            width:100%;
+            font-size:2rem;
+            padding:3rem;
+          }
+          .name2{
+            background: linear-gradient(45deg,rgba(48,35,174,.1),rgba(200,109,215,.1));
+            color:black;
+          }
+        }
+        
+      }
+    }
+    
+    .journeyContent{
+      display:none;
+    }
+  }
+
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    h1{
+      font-size:3rem;
+      width:80vw;
+      margin:0 auto;
+    }
+    p{
+      width:70vw;
+      margin:2rem auto;
+    }
+    .journey-box{
+      margin:4rem 0;
+      div{
+        width:90vw;
+        margin:0 auto;
+        .journey{
+          width:80%;
+          height:auto;
+          margin:1rem auto 3rem;
+          ul{
+            display:block;
+            text-align:left;
+            li{
+              display:flex;
+            align-items:center;
+              font-size:2rem;
+              margin:1.5rem 2rem ;
+              color:gray;
+            }
+            li::before{
+              margin-right:2rem ;
+              content:">";
+              font-size:3rem;
+              color:orange;
+            }
+          }
+          .name{
+            width:100%;
+            font-size:2rem;
+            padding:3rem;
+          }
+          .name2{
+            background: linear-gradient(45deg,rgba(48,35,174,.1),rgba(200,109,215,.1));
+            color:black;
+          }
+
+        }
+      }
+    }
+    .journeyContent{
+      display:none;
+    }
+  }
 `
 export default FSPJourney
 

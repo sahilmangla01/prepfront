@@ -7,6 +7,7 @@ import RazorPay from '../../RazorPay'
 const MockTest = () => {
   const { mock , isLoading} =ContextProvider()
 
+  
  
 
   
@@ -44,7 +45,7 @@ const MockTest = () => {
                     <p>{e.Participants} Participants</p>
                     <p>{e.duration} duration</p>
                   </div>
-                  <RazorPay />
+                  <RazorPay amount={100} id={e._id} />
                   {/* <button className='icons'><FaArrowRight /></button> */}
               </div>
               
@@ -84,9 +85,7 @@ const MockTest = () => {
 }
 
 const Wrapper = styled.section`
-.container{
-  margin:0 15rem ;
-}
+
 
 .cards{
   display:flex;
@@ -188,9 +187,79 @@ const Wrapper = styled.section`
         text-transform:uppercase;
           position:absolute;
           top:-1rem;
-          left:36%;
+          left:50%;
+          transform:translateX(-50%);
         background:white;
         padding:0 3rem;
+      }
+    }
+    
+
+    @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+      
+      .mocktestheader{
+        padding:3rem 0;
+        p{
+          width:90vw;
+          padding-top:2rem;
+          line-height:2.5rem;
+        }
+      }
+      .featured{
+        font-size:2.4rem;
+
+      }
+      .pastmocktest{
+        width:90vw;
+        p{
+          font-size:1.5rem;
+          // left:28%;
+          padding: 0 1.5rem;
+        }
+      }
+      .cards{
+        width:90vw;
+        img{
+          width:30vw;
+        }
+        .name{
+          font-size:2rem;
+          font-weight:bold;
+        }
+        button{
+          width:40vw;
+        }
+        .card{
+          width:80vw;
+        }
+      }
+    }
+
+
+    @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+      
+      .mocktestheader{
+        p{
+          width:60vw;
+          font-size:2rem;
+          line-height:3rem;
+        }
+      }
+      .cards{
+        justify-content:space-between;
+        .card{
+          width:40vw;
+        }
+        img{
+          width:15vw;
+        }
+        .name{
+          font-weight:bold;
+          font-size:2rem;
+        }
+        button{
+          width:20vw;
+        }
       }
     }
 

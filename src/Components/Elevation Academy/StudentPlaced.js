@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const StudentPlaced = () => {
   return (
     <Wrapper>
+        <div className='container'>
         <h1>Where our Students are placed</h1>
         <p>"You guarantee hard work, We</p>
         <p>guarantee placements"</p>
@@ -22,6 +23,7 @@ const StudentPlaced = () => {
             <div><img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Intel_logo.svg' alt='company'/></div>
             <div><img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Teksystems_logo.svg' alt='company'/></div>
         </div>
+        </div>
     </Wrapper>
   )
 }
@@ -29,7 +31,6 @@ const StudentPlaced = () => {
 const Wrapper = styled.section`
 text-align:center;
 margin:9rem auto;
-width:120rem;
 
 
 h1{
@@ -54,6 +55,33 @@ div{
     width:25rem;
 }
 
+}
+@media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+  .placed{
+    justify-content:space-around;
+    div{
+      width:20vw;
+      display:flex;
+      align-items:center;
+      img{
+        width:100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width:${({theme})=>theme.media.mobile}){
+  .placed{
+    justify-content:space-around;
+    div{
+      margin:2rem 1rem;
+      width:15vw;
+      display:flex;
+      align-items:center;
+      img{
+        width:100%;
+      }
+    }
+  }
 }
 
 `

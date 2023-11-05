@@ -52,6 +52,7 @@ const Faq = () => {
 
 const Wrapper = styled.section`
     margin:9rem 0;
+    text-align:center;
 h1{
     font-size:4rem;
     font-weight:bold;
@@ -105,6 +106,15 @@ color{
     h2{
         color:white;
     }
+}
+
+@media only screen and (max-width:${({theme})=>theme.media.mobile}){
+  .question,p{
+    width:90vw;
+  }
+  h2{
+    width:70vw;
+  }
 }
 
 `

@@ -176,5 +176,96 @@ form{
     border:2px solid #f78077;
 }
 
+@media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    .register-form {
+        width:95vw;
+        height:auto;
+    }
+    img{
+        display:none;
+    }
+    .register-right{
+        width:100%;
+        padding:5rem 1.5px; 
+        p{
+            font-size:2rem;
+            margin:0;
+            span{
+                top:-4rem;
+            }
+        }
+        
+    }
+    form{
+        margin:2rem;
+        label{
+            font-size:1.5rem;
+            color:gray;
+        }
+        select{
+            margin:1rem 0 ;
+            width:100%;
+        }
+        .yesno{
+            margin:0;
+            flex-direction:column;
+            align-items:flex-start;
+        }
+        .button{
+            margin:2rem 0 0;
+        }
+        .form-elements {
+            flex-direction:column;
+            margin:0;
+        }       
+    }
+}
+@media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    .register-form {
+        width:95vw;
+        height:auto;
+    }
+    img{
+        display:none;
+    }
+    .register-right{
+        width:100%;
+        padding:5rem 1.5px; 
+        p{
+            font-size:3rem;
+            margin:0;
+            span{
+                top:-4rem;
+                right:5rem;
+            }
+        }
+        
+    }
+    form{
+        margin:2rem;
+        label{
+            font-size:2rem;
+            color:gray;
+            margin-bottom:1.5rem;
+        }
+        select{
+            margin:1rem 0 ;
+            width:100%;
+        }
+        .yesno{
+            margin:0;
+            flex-direction:column;
+            align-items:flex-start;
+        }
+        .button{
+            margin:2rem 0 0;
+        }
+        .form-elements {
+            flex-direction:column;
+            margin:0;
+        }       
+    }
+}
+
 `
 export default RegisterForm

@@ -246,7 +246,96 @@ const Wrapper = styled.section`
         left:11.8rem;  
       }
 
-
+      @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+        .head-section{
+          width:100vw;
+          img{
+            display:none;
+          }
+        }
+        .head-left{
+          h2{
+            margin:3rem 0;
+          }
+          .left-btn1,.left-btn2{
+            margin:2rem 0;
+            width:30vw;
+          }
+        }
+        .batch{
+          width:100vw;
+          flex-direction:column;
+        }
+        .batch-right{
+          width:90vw;
+          margin:2rem auto;
+        }
+      }
+      @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+        .head-section{
+          width:100vw;
+          flex-direction:column-reverse;
+          img{
+            width:90vw;
+            margin-left:5%;
+          }
+        }
+        .head-left{
+          padding:5rem 2rem;
+          
+          .left-btn1,.left-btn2{
+            width:50vw;
+            margin:1rem auto;
+          }
+          h1{
+            font-size:2.5rem;
+          }
+          h2{
+            margin:2rem 0;
+          }
+        }
+        .batch{
+          width:100vw;
+          flex-direction:column;
+        }
+        .batch-right{
+          flex-direction:column;
+          width:90vw;
+          margin:0;
+          align-items:flex-start;
+          .flex{
+            align-items:flex-start;
+          }
+        }
+        .right-element{
+          margin:2rem;  
+          text-align:left;  
+          display:flex;
+          img{
+            margin-right:2rem;
+          }
+        
+        }
+        .line,.line2{
+          padding:3rem 2px;
+          top:6rem;
+          left:2.8rem;
+        }
+      }
+      .upcoming-batch{
+        padding:2rem 0;
+        p{
+          width:80%;
+        }
+        .upcoming{
+          flex-direction:column;
+          width:90vw;
+        }
+      }
+      .batch-left{
+        margin-bottom:2rem;
+      }
+      
 
 `
 export default ElevationAcademy

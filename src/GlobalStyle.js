@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
       }
 
       .container{
-        width:130rem;
+        width:88vw;
         margin:0 auto;
       
       }
@@ -58,6 +58,25 @@ export const GlobalStyle = createGlobalStyle`
       }
      .grid-two-column{
       grid-template-columns:repeat(2, 1fr)
+     }
+
+
+     @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+      
+      .container{
+        width:90vw;
+        margin:0 auto;
+      }
+      .grid{
+        gap:0;
+      }
+
+     }
+   
+     @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+      .container{
+        width:90vw;
+      }
      }
 
 

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const DreamJob = () => {
   return (
     <Wrapper>
+        <div className="container">
         <h1>How will you reach to your dream Job?</h1>
         <div className='dream flex '>
             <div className='dream-left flex flex-column'>
@@ -12,25 +13,45 @@ const DreamJob = () => {
                         <h2 className='left1'>Application & Shortlisting</h2>
                         <div className='connect'></div>
                     </div>
+                    <div className='flex dream-right-element mobile'>
+                        <p>Apply, fill the form & wait till we review your application. You will be selected based on the eligibility criteria (2023, 2022 & 2021 passouts)</p>
+                        <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Application%2B%2BShortlisting.webp' alt='dream1'/>
+                    </div>
                     <div className='flex left-element '>
                         <span className='span2'>2</span>
                         <h2 className='left2'>Attend Free Webinar</h2>
                         <div className='connect'></div>
+                    </div>
+                    <div className='flex dream-right-element mobile'>
+                        <p>Go through the free classes and learn the important concepts while understanding how the program unfolds.</p>
+                        <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/5%2BDays%2BFree%2BClass.webp' alt='dream1'/>
                     </div>
                     <div className='flex left-element '>
                         <span className='span3'>3</span>
                         <h2 className='left3'>Batch Commencement</h2>
                         <div className='connect'></div>
                     </div>
+                    <div className='flex dream-right-element mobile'>
+                        <p>Embark on your journey of success once you receive the offer letter for successful enrolment.</p>
+                        <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Complete%2BEnrollment%2B.webp' alt='dream1'/>
+                    </div>
                     <div className='flex left-element '>
                         <span className='span4'>4</span>
                         <h2 className='left4'>7 Months Program</h2>
                         <div className='connect'></div>
                     </div>
+                    <div className='flex dream-right-element mobile'>
+                        <p>You have now signed up for a learning-filled journey of 7 months that ends with you being placed in your dream company.</p>
+                        <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/4%2BMonths%2BPrograms.webp' alt='dream1'/>
+                    </div>
                     <div className='flex left-element '>
                         <span className='span5'>5</span>
                         <h2 className='left5'>Guaranteed Placement</h2>
                         <div className='connect'></div>
+                    </div>
+                    <div className='flex dream-right-element mobile'>
+                        <p>The program comes with interview opportunities and a placement guarantee of minimum 5 LPA.</p>
+                        <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Interview%2BOpportunities%2B.webp' alt='dream1'/>
                     </div>
             </div>
             <div className='dream-right'>
@@ -92,18 +113,22 @@ const DreamJob = () => {
             </div>
 
         </div>
+        </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
         text-align:center;
-        margin:9rem auto;
-        width:120rem;
+        margin-top:9rem;
+        margin-bottom:9rem;
         h1{
             font-size:3rem;
           font-weight:bold;
           color:#45474B;
+        }
+        .mobile{
+            display:none;
         }
         .dream{
             margin:8rem 0;
@@ -128,7 +153,7 @@ const Wrapper = styled.section`
                 font-size:2rem;
                 text-align:left;
                 color: #424242;
-                padding: 2rem 2rem;
+                padding: 0 2rem;
                 margin:1rem 0;
                 max-height: 90px;
                 overflow-y: scroll;
@@ -236,5 +261,48 @@ const Wrapper = styled.section`
             }
         }
 
+        @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+            .dream{
+                margin:5rem 0;
+            }
+            .dream-left{
+                padding:5rem 2rem;
+            }
+            .why-section{
+                justify-content:space-between;
+            }
+            .why-element{
+                padding:2rem;
+                margin:1rem;
+            }
+        }
+        @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+            h1{
+                font-size:2.5rem;
+            }
+            .dream{
+                margin:5rem 0;
+            }
+            .dream-left{
+                padding:5rem 1rem;
+            }
+            .dream-right,.connect{
+                display:none;
+            }
+            .left-element{
+                width:80vw;
+            }
+            .mobile{
+                display:block;
+                margin:2rem 0;
+            }
+            .dream-right-element{
+                height:auto;
+            }
+            .dream-right-element p {
+                width:100%;
+                padding:0rem 2rem;
+            }
+        }
 `
 export default DreamJob

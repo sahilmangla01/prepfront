@@ -59,7 +59,7 @@ const Wrapper = styled.section`
   .project{
     padding: 5rem 10rem;
     img{
-      width:45vw;
+      width:40vw;
       height:60vh;
       margin-bottom:3rem;
       
@@ -101,6 +101,70 @@ const Wrapper = styled.section`
     }
   }
 
+
+  @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+    .projects{
+      display:block;
+    }
+    .project{
+      padding:5rem 0 2rem;
+      img{
+        width:90vw;
+        height:40vh;  
+      }
+      h1{
+        font-size:2rem;
+        text-align:center;
+      }
+      p{
+        width:80vw;
+      }
+    }
+
+    .Topics{
+      margin: 0 ;
+      width:80vw;
+      h1{
+        
+      text-align:center
+      }
+    }
+
+    ul{
+      margin:0 5%;
+      li{
+        width:80vw;
+        font-size:1.8rem;
+        padding:2rem;
+        margin-bottom:1rem;
+      }
+    }
+    
+  }
+
+  @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+    .project{
+      padding: 5rem 2rem;
+
+      img{
+        width: 60vw;
+        height: 30vh;
+      }
+      p{
+        width:50vw;
+      }
+    }
+
+    ul{
+      li{
+        width:30vw;
+        font-size:1.8rem;
+        line-height:3rem;
+      }
+    }
+  }
+
+  
 
 `
 

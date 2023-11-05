@@ -171,6 +171,35 @@ const Wrapper = styled.section`
          padding:1rem 2rem;
       }
    }
+
+   @media only screen and (max-width:${({theme})=>theme.media.mobile}){
+      flex-direction:column;
+      .loginForm{
+         width:90vw;
+         padding:2rem;
+         margin-bottom:3rem;
+      }
+      form{
+         input{
+            width:100%;
+         }
+      }
+   }
+
+   @media only screen and (min-width:541px) and (max-width:${({theme})=>theme.media.tab}){
+      flex-direction:column;
+      .loginForm{
+         width:90vw;
+         padding:2rem;
+         margin-bottom:3rem;
+      }
+      form{
+         input{
+            width:100%;
+         }
+      }
+   }
+  
 `
 
 export default Login
