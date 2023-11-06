@@ -586,6 +586,9 @@ const Wrapper = styled.section`
     }
     .btnsection{
       margin:3rem 0 3rem 20rem;
+      button{
+        width:25vw;
+      }
     }
 
     .languageTool{
@@ -733,6 +736,9 @@ const Wrapper = styled.section`
       }
       .btnsection{
         margin: 2rem 0;
+        button{
+          width:40vw;
+        }
       }
 
       .languageTool{

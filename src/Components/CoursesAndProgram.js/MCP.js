@@ -445,6 +445,9 @@ const Wrapper = styled.section`
     }
     .btnsection{
       margin-left: 0rem;
+      button{
+        width:40vw;
+      }
     }
 
   }
@@ -466,7 +469,7 @@ const Wrapper = styled.section`
           width:100%;
         }
         button{
-          width:50%;
+          width:30vw;
         }
       }
       img{
@@ -499,6 +502,9 @@ const Wrapper = styled.section`
 
     .btnsection{
      margin: 2rem 5rem;
+     button{
+      width:25vw;
+     }
     }
     .enroll-money{
       font-size:4rem;
